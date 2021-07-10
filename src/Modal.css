@@ -1,0 +1,45 @@
+.modal {
+  background-color: #cdf0ea;
+  height: 400px;
+  overflow: auto;
+}
+
+.gifs {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.gif {
+  padding: 0 2px;
+}
+.loader {
+  color: black;
+}
+.search__form {
+  outline-width: 0;
+  border: none;
+  padding: 5px 20px;
+  margin: 10px 10px;
+  border-radius: 1000px;
+  background-color: #eff2f5;
+  width: 15rem;
+}
+.search__submit {
+  outline-width: 0;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  width: 50px;
+  height: 20px;
+  color: gray;
+}
+
+.modal_imageButton {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
