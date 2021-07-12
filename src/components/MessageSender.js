@@ -24,7 +24,7 @@ export default function MessageSender() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (input.trim().length > 0) {
+    if (input.trim().length > 0 || imageURL.length > 0) {
       db.collection("posts").add({
         message: input,
         imageURL: imageURL,
