@@ -24,11 +24,14 @@ export default function MessageSender() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    db.collection("posts").add({
-      message: input,
-      imageURL: imageURL,
-      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-    });
+    if (input.trim().length > 0) {
+      db.collection("posts").add({
+        message: input,
+        imageURL: imageURL,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      });
+    }
+
     console.log("hola");
     setInput("");
     setImagesURL("");
@@ -55,7 +58,11 @@ export default function MessageSender() {
         </div>
       )}
       <div className="messageSender__bottom">
-        <button type="button" className="messageSender__option" onClick={toggleIsGifAreaOpen}>
+        <button
+          type="button"
+          className="messageSender__option"
+          onClick={toggleIsGifAreaOpen}
+        >
           <GifIcon style={{ color: "blue" }} />
           <h3>Insert GIF</h3>
         </button>
